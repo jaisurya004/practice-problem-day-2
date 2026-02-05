@@ -1,0 +1,39 @@
+#include <stdio.h>
+int main(){
+    int i,n,max=0,min=0;
+    scanf("%d",&n);
+    int a[n];
+    for(i=0;i<n;i++){
+    scanf("%d",&a[i]);
+    }
+    max=a[0];
+    min=a[0];
+    int smax=a[1];
+    int smin=a[1];
+    for(i=0;i<n;i++){
+        if(max<a[i]){
+        smax=max;
+        max=a[i];
+            
+        }
+        else if(smax<a[i] && a[i]!=max)
+        smax=a[i];
+            
+        
+    }
+    printf("%d",smax);
+    
+    for(i=1;i<n;i++){
+        if(min>a[i]){
+        smin=min;
+        min=a[i];
+    }
+        else if(smin>a[i] && a[i]!=min)
+        smin=a[i];
+    
+        
+    }
+    printf("\n");
+        printf("%d",smin);
+    
+}
